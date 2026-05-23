@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vrishavahana – Designed for You, Tailored to Perfection</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="vrishavahana.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- ANNOUNCEMENT -->
+  <div class="announcement">✦ Order now & get 30% off your first custom design ✦</div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Vrishavahana</div>
+    <ul>
+      <li><a href="#gallery">Design Gallery</a></li>
+      <li><a href="#customize">Customize</a></li>
+      <li><a href="#measurement">Measurements</a></li>
+      <li><a href="#consult">Consult</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Sign In</a>
+  </nav>
+
+  <!-- HERO CAROUSEL -->
+  <section style="padding:0;" id="home">
+    <div class="hero-carousel-section">
+
+      <!-- Blurred background that matches active slide -->
+      <div class="hero-bg" id="heroBg"></div>
+
+      <!-- Top title -->
+      <div class="hero-top-text">
+        <p class="hero-tagline">✦ Crafted With Precision ✦</p>
+        <h1 class="hero-title">Designed For You<br><span style="color:var(--gold-light);font-style:italic;">Tailored to
+            Perfection</span></h1>
+      </div>
+
+      <div id="heroBg">
+
+        <div class="active-category-name">
+          <span id="activeCatName"></span>
+        </div>
+
+        <div class="carousel-track" id="carouselTrack"></div>
+
+        <button class="carousel-arrow left" onclick="moveCarousel(-1)">‹</button>
+        <button class="carousel-arrow right" onclick="moveCarousel(1)">›</button>
+
+        <div id="carouselDots"></div>
+
+      </div>
+
+      <!-- Bottom CTA + dots -->
+      <div class="hero-bottom">
+        <div style="margin-bottom:22px;">
+          <a href="#gallery" class="btn-explore">Explore Designs</a>
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro" id="intro">
+    <div class="intro-img-wrap">
+      <img src="images/image8.jpeg" alt="Fashion Design" class="intro-img-main"
+        style="border-radius:3px; width:65%; aspect-ratio:3/4; object-fit:cover;">
+      <img src="images/image9.jpeg" alt="Tailoring Detail" class="intro-img-accent"
+        style="width:50%; aspect-ratio:1/1.2; object-fit:cover; position:absolute; bottom:-40px; right:0; border:6px solid var(--white); box-shadow:0 10px 40px rgba(0,0,0,0.12); border-radius:3px;">
+    </div>
+    <div class="intro-text">
+      <p class="section-tag">Our Story</p>
+      <h2 class="section-title">Designed for You,<br><em>Tailored to Perfection</em></h2>
+      <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-diamond"></div>
+        <div class="divider-line"></div>
+      </div>
+      <p>We bring traditional tailoring into the digital world. Our platform allows you to explore curated fashion
+        designs, customize every detail to your preferences, and get outfits tailored precisely to your measurements.
+      </p>
+      <p>Whether you choose an existing design or create your own, our expert tailors and designers work closely with
+        you to deliver clothing that fits perfectly and reflects your personal style.</p>
+      <p>From concept to craftsmanship, we make custom tailoring simple, accessible, and reliable — right from your
+        home.</p>
+      <div style="display:flex;gap:14px;margin-top:32px;">
+        <a href="#gallery" class="btn-primary">View Designs</a>
+        <a href="#contact" class="btn-outline">Book Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-header">
+      <p class="section-tag">Collections</p>
+      <h2 class="section-title">Our <em>Designs</em></h2>
+      <div class="divider" style="max-width:300px;margin:16px auto 0;">
+        <div class="divider-line"></div>
+        <div class="divider-diamond"></div>
+        <div class="divider-line"></div>
+      </div>
+    </div>
+
+    <div class="gallery-tabs">
+      <button class="tab-btn active" onclick="showTab('women')">Women</button>
+      <button class="tab-btn" onclick="showTab('men')">Men</button>
+      <button class="tab-btn" onclick="showTab('kids')">Kids</button>
+      <button class="tab-btn" onclick="showTab('bridal')">Bridal</button>
+    </div>
+
+    <div class="gallery-category active" id="tab-women">
+      <div class="category-label">Women's Collection</div>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="card-img-placeholder">👘</div>
+          <div class="gallery-card-info">
+            <div class="card-name">Kurti Design</div>
+            <div class="card-price">Starting from LKR 2,500</div>
+            <div class="card-stars">★★★★★</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="card-img-placeholder">👗</div>
+          <div class="gallery-card-info">
+            <div class="card-name">Casual Tops</div>
+            <div class="card-price">Starting from LKR 1,800</div>
+            <div class="card-stars">★★★★☆</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="card-img-placeholder">🥻</div>
+          <div class="gallery-card-info">
+            <div class="card-name">Modern Maxi</div>
+            <div class="card-price">Starting from LKR 4,500</div>
+            <div class="card-stars">★★★★★</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-category" id="tab-men">
+      <div class="category-label">Men's Collection</div>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="card-img-placeholder">👔</div>
+          <div class="gallery-card-info">
+            <div class="card-name">Trousers</div>
+            <div class="card-price">Starting from LKR 2,500</div>
+            <div class="card-stars">★★★★★</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="card-img-placeholder">🧥</div>
+          <div class="gallery-card-info">
+            <div class="card-name">Casual Wear</div>
+            <div class="card-price">Starting from LKR 2,800</div>
+            <div class="card-stars">★★★★☆</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="card-img-placeholder">👕</div>
+          <div class="gallery-card-info">
+            <div class="card-name">Custom Shirts</div>
+            <div class="card-price">Starting from LKR 1,900</div>
+            <div class="card-stars">★★★★★</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-category" id="tab-kids">
+      <div class="category-label">Kids' Collection</div>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="card-img-placeholder">🎀</div>
+          <div class="gallery-card-info">
+            <div class="card-name">Casual Kids Wear</div>
+            <div class="card-price">Starting from LKR 1,200</div>
+            <div class="card-stars">★★★★★</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="card-img-placeholder">🌸</div>
+          <div class="gallery-card-info">
+            <div class="card-name">Small Frocks</div>
+            <div class="card-price">Starting from LKR 1,500</div>
+            <div class="card-stars">★★★★☆</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="card-img-placeholder">✨</div>
+          <div class="gallery-card-info">
+            <div class="card-name">Party Wear</div>
+            <div class="card-price">Starting from LKR 2,000</div>
+            <div class="card-stars">★★★★★</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-category" id="tab-bridal">
+      <div class="category-label">Bridal Collection</div>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="card-img-placeholder">👰</div>
+          <div class="gallery-card-info">
+            <div class="card-name">Bridal Gown</div>
+            <div class="card-price">Starting from LKR 18,000</div>
+            <div class="card-stars">★★★★★</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="card-img-placeholder">💍</div>
+          <div class="gallery-card-info">
+            <div class="card-name">Reception Dress</div>
+            <div class="card-price">Starting from LKR 12,000</div>
+            <div class="card-stars">★★★★★</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="card-img-placeholder">
+            <img src="images/image1.jpeg" alt="Bridesmaid Set" class="card-image" onclick="scrollToCustomize()">
+          </div>
+          <div class="gallery-card-info">
+            <div class="card-name">Bridesmaid Set</div>
+            <div class="card-price">Starting from LKR 6,500</div>
+            <div class="card-stars">★★★★☆</div>
+            <div class="card-actions">
+              <button class="card-btn primary" onclick="scrollToCustomize()">Customize</button>
+              <button class="card-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMIZE -->
+  <section class="customize" id="customize">
+    <div class="customize-inner">
+      <div class="customize-preview">
+        <p class="section-tag">Live Preview</p>
+        <div class="preview-frame">
+          <div class="card-img-placeholder" id="preview-display">
+            <img id="preview-image" src="images/image10.webp" alt="Dress Preview"
+              style="width:100%; height:100%; object-fit:cover; border-radius:3px;">
+          </div>
+        </div>
+        <div class="price-display">
+          <div class="price-label">Estimated Price</div>
+          <div class="price-value" id="price-display">LKR 2,500</div>
+          <div style="font-size:0.72rem;color:var(--gray);margin-top:4px;">Final price after measurement</div>
+        </div>
+      </div>
+
+      <div class="customize-options">
+        <p class="section-tag">Design Studio</p>
+        <h2 class="section-title">Customize Your <em>Design</em></h2>
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="option-group">
+          <span class="option-label">Color Selection</span>
+          <div class="color-swatches">
+            <div class="swatch active" style="background:#c0392b;" onclick="selectColor(this,'#c0392b',2500)"
+              title="Red"></div>
+            <div class="swatch" style="background:#2980b9;" onclick="selectColor(this,'#2980b9',2500)" title="Blue">
+            </div>
+            <div class="swatch" style="background:#27ae60;" onclick="selectColor(this,'#27ae60',2500)" title="Green">
+            </div>
+            <div class="swatch" style="background:#8e44ad;" onclick="selectColor(this,'#8e44ad',2500)" title="Purple">
+            </div>
+            <div class="swatch" style="background:#e67e22;" onclick="selectColor(this,'#e67e22',2500)" title="Orange">
+            </div>
+            <div class="swatch" style="background:#f39c12;" onclick="selectColor(this,'#f39c12',2500)" title="Yellow">
+            </div>
+            <div class="swatch" style="background:#1abc9c;" onclick="selectColor(this,'#1abc9c',2500)" title="Teal">
+            </div>
+            <div class="swatch" style="background:#e91e63;" onclick="selectColor(this,'#e91e63',2500)" title="Pink">
+            </div>
+            <div class="swatch" style="background:#795548;" onclick="selectColor(this,'#795548',2500)" title="Brown">
+            </div>
+            <div class="swatch" style="background:#263238;" onclick="selectColor(this,'#263238',2500)" title="Charcoal">
+            </div>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <span class="option-label">Fabric</span>
+          <div class="option-chips">
+            <div class="chip active" onclick="selectChip(this, 0)">Cotton</div>
+            <div class="chip" onclick="selectChip(this, 500)">Silk</div>
+            <div class="chip" onclick="selectChip(this, 300)">Linen</div>
+            <div class="chip" onclick="selectChip(this, 800)">Velvet</div>
+            <div class="chip" onclick="selectChip(this, 1200)">Chiffon</div>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <span class="option-label">Size</span>
+          <div class="option-chips">
+            <div class="chip" onclick="selectChip(this,0)">XS</div>
+            <div class="chip active" onclick="selectChip(this,0)">S</div>
+            <div class="chip" onclick="selectChip(this,0)">M</div>
+            <div class="chip" onclick="selectChip(this,0)">L</div>
+            <div class="chip" onclick="selectChip(this,0)">XL</div>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <span class="option-label">Sleeves</span>
+          <div class="option-chips">
+            <div class="chip" onclick="selectChip(this,0)">Sleeveless</div>
+            <div class="chip" onclick="selectChip(this,0)">Short</div>
+            <div class="chip active" onclick="selectChip(this,300)">Long</div>
+            <div class="chip" onclick="selectChip(this,200)">3/4</div>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <span class="option-label">Neck Style</span>
+          <div class="option-chips">
+            <div class="chip active" onclick="selectChip(this,0)">V-Neck</div>
+            <div class="chip" onclick="selectChip(this,0)">Round</div>
+            <div class="chip" onclick="selectChip(this,200)">Boat Neck</div>
+            <div class="chip" onclick="selectChip(this,300)">Square</div>
+            <div class="chip" onclick="selectChip(this,400)">High Neck</div>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <span class="option-label">Personal Preferences</span>
+          <textarea
+            style="width:100%;padding:12px 14px;border:1px solid var(--light-gray);border-radius:2px;font-family:'Jost',sans-serif;font-size:0.88rem;resize:vertical;min-height:80px;outline:none;background:var(--cream);"
+            placeholder="Describe any special requests, embroidery, pattern preferences…"></textarea>
+        </div>
+
+        <div class="customize-actions">
+          <button class="btn-primary" onclick="alert('Added to cart! Proceed to measurements.')">Add to Cart</button>
+          <a href="#measurement" class="btn-outline">Add Measurements</a>
+          <button class="btn-outline" onclick="alert('Design saved!')">Save Design</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEASUREMENT -->
+  <section class="measurement" id="measurement">
+    <div class="measurement-inner">
+      <div class="measure-guide">
+        <p class="section-tag">Sizing Guide</p>
+        <div class="measure-figure">🧍</div>
+        <p class="measure-note">
+          Use a soft measuring tape.<br>
+          Measure snugly but not tight.<br>
+          Stand straight in natural posture.<br>
+          All measurements in cm or inches.
+        </p>
+      </div>
+
+      <div>
+        <p class="section-tag">Measurements</p>
+        <h2 class="section-title">Customize Your <em>Fit</em></h2>
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <span class="option-label">Unit</span>
+          <div class="unit-toggle" style="max-width:180px;">
+            <button class="unit-btn active" onclick="setUnit(this,'cm')">cm</button>
+            <button class="unit-btn" onclick="setUnit(this,'inch')">inch</button>
+          </div>
+        </div>
+
+        <div class="measure-form">
+          <div class="form-group">
+            <label>Chest</label>
+            <input type="number" placeholder="e.g. 86">
+          </div>
+          <div class="form-group">
+            <label>Waist</label>
+            <input type="number" placeholder="e.g. 70">
+          </div>
+          <div class="form-group">
+            <label>Hip</label>
+            <input type="number" placeholder="e.g. 92">
+          </div>
+          <div class="form-group">
+            <label>Sleeve Length</label>
+            <input type="number" placeholder="e.g. 58">
+          </div>
+          <div class="form-group">
+            <label>Length</label>
+            <input type="number" placeholder="e.g. 110">
+          </div>
+          <div class="form-group">
+            <label>Shoulder</label>
+            <input type="number" placeholder="e.g. 38">
+          </div>
+        </div>
+
+        <div style="margin-top:24px;">
+          <span class="option-label">Fit Preference</span>
+          <div class="fit-pref">
+            <label class="fit-opt"><input type="radio" name="fit" checked> Regular Fit</label>
+            <label class="fit-opt"><input type="radio" name="fit"> Slim Fit</label>
+            <label class="fit-opt"><input type="radio" name="fit"> Loose Fit</label>
+          </div>
+        </div>
+
+        <div style="margin-top:28px;display:flex;gap:12px;">
+          <button class="btn-primary" onclick="alert('Measurements saved! Proceeding to order.')">Save
+            Measurements</button>
+          <button class="btn-outline" onclick="alert('Upload your photo for AI measurement (coming soon!)')">📷 AI
+            Measure</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <p class="section-tag">Our Packages</p>
+    <h2 class="section-title">Simple, Transparent <em>Pricing</em></h2>
+    <div class="divider" style="max-width:300px;margin:16px auto 0;">
+      <div class="divider-line"></div>
+      <div class="divider-diamond"></div>
+      <div class="divider-line"></div>
+    </div>
+    <p style="color:var(--gray);margin-top:14px;font-size:0.9rem;">Choose the plan that fits your needs. All include
+      free consultations.</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="plan-name">Basic Stitch</div>
+        <div class="plan-price"><span>LKR</span> 2,500</div>
+        <div class="plan-desc">Perfect for casual everyday wear and simple alterations.</div>
+        <ul class="plan-features">
+          <li><span class="check">✦</span> 1 Custom Design</li>
+          <li><span class="check">✦</span> Basic Fabric Options</li>
+          <li><span class="check">✦</span> Standard Measurements</li>
+          <li><span class="check">✦</span> 14-Day Delivery</li>
+          <li><span class="check">✦</span> 1 Revision</li>
+        </ul>
+        <button class="btn-plan" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get
+          Started</button>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="featured-tag">Most Popular</div>
+        <div class="plan-name">Signature Craft</div>
+        <div class="plan-price"><span>LKR</span> 6,500</div>
+        <div class="plan-desc">Our most popular package for special occasions and events.</div>
+        <ul class="plan-features">
+          <li><span class="check">✦</span> 3 Custom Designs</li>
+          <li><span class="check">✦</span> Premium Fabric Options</li>
+          <li><span class="check">✦</span> AI Measurement Assist</li>
+          <li><span class="check">✦</span> 7-Day Express Delivery</li>
+          <li><span class="check">✦</span> 3 Revisions</li>
+          <li><span class="check">✦</span> Designer Consultation</li>
+        </ul>
+        <button class="btn-plan" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get
+          Started</button>
+      </div>
+
+      <div class="pricing-card">
+        <div class="plan-name">Bridal Couture</div>
+        <div class="plan-price"><span>LKR</span> 18,000</div>
+        <div class="plan-desc">Full bridal experience with unlimited customization and premium care.</div>
+        <ul class="plan-features">
+          <li><span class="check">✦</span> Unlimited Designs</li>
+          <li><span class="check">✦</span> Luxury Fabric Collection</li>
+          <li><span class="check">✦</span> In-Person Fitting</li>
+          <li><span class="check">✦</span> 5-Day Priority Delivery</li>
+          <li><span class="check">✦</span> Unlimited Revisions</li>
+          <li><span class="check">✦</span> Dedicated Designer</li>
+        </ul>
+        <button class="btn-plan" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get
+          Started</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULT -->
+  <section class="consult" id="consult">
+    <p class="section-tag">Expert Guidance</p>
+    <h2 class="section-title" style="color:var(--white);">Meet Our <em style="color:var(--gold-light);">Designers</em>
+    </h2>
+    <div class="divider" style="max-width:300px;margin:16px auto 0;">
+      <div class="divider-line" style="background:rgba(255,255,255,0.2);"></div>
+      <div class="divider-diamond" style="background:var(--gold-light);"></div>
+      <div class="divider-line" style="background:rgba(255,255,255,0.2);"></div>
+    </div>
+    <p style="opacity:0.8;margin-top:16px;font-size:0.9rem;max-width:500px;margin-left:auto;margin-right:auto;">Get
+      personal guidance from our fashion experts through chat, voice, or video — all from home.</p>
+
+    <div class="consult-grid">
+      <div class="consult-card">
+        <div class="consult-icon">💬</div>
+        <h3>Live Chat</h3>
+        <p>Chat with our designers in real time. Share ideas, get suggestions, and refine your design instantly.</p>
+      </div>
+      <div class="consult-card">
+        <div class="consult-icon">📹</div>
+        <h3>Video Call</h3>
+        <p>Schedule a face-to-face video session with our expert tailors for detailed design discussions.</p>
+      </div>
+      <div class="consult-card">
+        <div class="consult-icon">📐</div>
+        <h3>Upload Sketches</h3>
+        <p>Upload your own sketches, reference photos, or inspiration images for a truly custom creation.</p>
+      </div>
+    </div>
+    <a href="#contact" class="btn-gold">Book a Consultation</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <p class="section-tag">Who We Are</p>
+      <h2 class="section-title">Where Tradition Meets<br><em style="color:var(--gold-light);">Modern Design</em></h2>
+      <div class="divider" style="margin:20px 0 30px;">
+        <div class="divider-line" style="background:rgba(255,255,255,0.2);"></div>
+        <div class="divider-diamond" style="background:var(--gold-light);"></div>
+        <div class="divider-line" style="background:rgba(255,255,255,0.2);"></div>
+      </div>
+      <p class="about-text">Inspired by generations of tailoring expertise combined with technology to redefine custom
+        fashion. We are committed to delivering personalized clothing that tells your unique story.</p>
+      <p class="about-text">Every piece is crafted with attention to detail, ensuring comfort, quality, and timeless
+        style. We believe fashion should fit you — not the other way around.</p>
+
+      <div class="stats-row">
+        <div class="stat">
+          <strong>50+</strong>
+          <span>Happy Clients</span>
+        </div>
+        <div class="stat">
+          <strong>12+</strong>
+          <span>Years Experience</span>
+        </div>
+        <div class="stat">
+          <strong>98%</strong>
+          <span>Satisfaction Rate</span>
+        </div>
+      </div>
+
+      <a href="#contact" class="btn-gold">Work With Us</a>
+    </div>
+    <div class="about-img-stack">
+      <img src="images/image8.jpeg" alt="Fashion Design" class="about-img-main">
+      <img src="images/image9.jpeg" alt="Tailoring Detail" class="about-img-accent">
+    </div>
+  </section>
+
+  <!-- CONTACT / BOOKING -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <p class="section-tag">Get In Touch</p>
+        <h2 class="contact-info h2"
+          style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;line-height:1.2;margin-bottom:20px;">
+          Let's Create<br>Something <em style="color:var(--maroon);font-style:italic;">Beautiful</em>
+        </h2>
+        <p style="color:var(--gray);line-height:1.9;font-size:0.9rem;margin-bottom:36px;">Whether you have a design in
+          mind or need help starting from scratch — we're here. Reach out and our team will respond within 24 hours.</p>
+
+        <div class="contact-detail">
+          <div class="icon-circle">
+            <i class="fas fa-location-dot"></i>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Visit Us</strong>
+            <span>123 Fashion Street, Colombo 03, Sri Lanka</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="icon-circle">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Call Us</strong>
+            <span>+94 714606325</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="icon-circle">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Email Us</strong>
+            <span>vrishavahana07@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="icon-circle">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Working Hours</strong>
+            <span>Mon–Sat: 9:00 AM – 7:00 PM</span>
+          </div>
+        </div>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- BOOKING FORM -->
+      <div class="contact-form">
+        <p class="section-tag">Book Appointment</p>
+        <h3>Send Us a Message</h3>
+        <div class="form-divider"></div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label>First Name</label>
+            <input type="text" placeholder="Amal">
+          </div>
+          <div class="form-field">
+            <label>Last Name</label>
+            <input type="text" placeholder="Perera">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@email.com">
+          </div>
+          <div class="form-field">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+94 77 000 0000">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>Service Interested In</label>
+          <div class="service-chips">
+            <div class="service-chip" onclick="toggleChip(this)">Custom Dress</div>
+            <div class="service-chip active" onclick="toggleChip(this)">Bridal Wear</div>
+            <div class="service-chip" onclick="toggleChip(this)">Men's Suit</div>
+            <div class="service-chip" onclick="toggleChip(this)">Kids Wear</div>
+            <div class="service-chip" onclick="toggleChip(this)">Alteration</div>
+            <div class="service-chip" onclick="toggleChip(this)">Consultation</div>
+          </div>
+        </div>
+
+        <div class="form-row" style="margin-top:18px;">
+          <div class="form-field">
+            <label>Preferred Date</label>
+            <input type="date">
+          </div>
+          <div class="form-field">
+            <label>Preferred Time</label>
+            <select>
+              <option>9:00 AM – 10:00 AM</option>
+              <option>10:00 AM – 11:00 AM</option>
+              <option>11:00 AM – 12:00 PM</option>
+              <option>2:00 PM – 3:00 PM</option>
+              <option>3:00 PM – 4:00 PM</option>
+              <option>4:00 PM – 5:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>Your Message</label>
+          <textarea
+            placeholder="Tell us about your design idea, occasion, fabric preferences, or any questions…"></textarea>
+        </div>
+
+        <div class="form-submit-row">
+          <span class="form-note">⏱ We reply within 24 hours</span>
+          <button class="btn-primary" onclick="submitForm()">Send Message →</button>
+        </div>
+
+        <div class="success-msg" id="success-msg">
+          ✅ Thank you! Your message has been received. We'll contact you within 24 hours.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Smart<span>Tailor</span></div>
+        <p class="footer-desc">Sri Lanka's premier online custom tailoring platform. Bringing traditional craftsmanship
+          into the digital age — designed for you, tailored to perfection.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-message"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#gallery">Design Gallery</a></li>
+          <li><a href="#customize">Customize</a></li>
+          <li><a href="#measurement">Measurements</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Custom Dresses</a></li>
+          <li><a href="#">Bridal Wear</a></li>
+          <li><a href="#">Men's Tailoring</a></li>
+          <li><a href="#">Kids Clothing</a></li>
+          <li><a href="#">Alterations</a></li>
+          <li><a href="#">Design Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:0.82rem;margin-bottom:14px;line-height:1.7;">Get new designs, offers and updates delivered
+          to your inbox.</p>
+        <div class="footer-newsletter">
+          <input type="email" placeholder="Your email address">
+          <button class="btn-primary" style="width:100%;padding:11px;" onclick="alert('Subscribed!')">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Vrishavahana. All rights reserved.</span>
+      <span style="display:flex;gap:20px;">
+        <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.75rem;">Privacy Policy</a>
+        <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.75rem;">Terms of Service</a>
+      </span>
+      <span>Made with ❤️ in Sri Lanka</span>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
