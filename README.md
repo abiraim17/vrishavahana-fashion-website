@@ -1,6 +1,5 @@
 # Vrishavahana - Custom Tailoring Fashion Website
 
-![Vrishavahana Banner](images/image1.jpeg)
 
 ## 🌟 Overview
 
